@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasa Suruh Patokbeusi</title>
+    <script src="https://tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        body { font-family: sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen pb-20">
+
+    <!-- Header -->
+    <header class="bg-green-600 text-white p-4 shadow-md sticky top-0 z-50 text-center">
+        <h1 class="text-xl font-bold">🏃‍♂️ JASUPA </h1>
+        <p class="text-xs opacity-90 text-yellow-200">Solusi Cepat & Amanah Warga Patokbeusi</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-md mx-auto p-4 space-y-4">
+        
+        <!-- Banner Informasi -->
+        <div class="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl p-4 text-white shadow-sm">
+            <h2 class="font-bold text-lg">Bantu Teman, Mudahkan Urusan!</h2>
+            <p class="text-sm opacity-90 mt-1">Butuh belanja ke pasar, bayar tagihan, atau antar barang di sekitar Patokbeusi? Tim kami siap meluncur!</p>
+        </div>
+
+        <!-- Form Order -->
+        <div class="bg-white rounded-xl p-5 shadow-sm space-y-4">
+            <h3 class="font-bold text-gray-800 text-lg border-b pb-2"><i class="fa-solid fa-file-invoice text-green-600 mr-2"></i>Formulir Pesanan</h3>
+            
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap</label>
+                <input type="text" id="nama" placeholder="Contoh: Kang Asep" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Pilih Jenis Layanan</label>
+                <select id="layanan" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white">
+                    <option value="Belanja ke Pasar/Toko">Belanja ke Pasar / Toko</option>
+                    <option value="Antar / Jemput Barang">Antar / Jemput Barang</option>
+                    <option value="Beli Makanan Makanan Siap Saji">Beli Makanan / Cemilan</option>
+                    <option value="Urusan Lainnya (Tulis di detail)">Urusan Lainnya</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Alamat Lengkap Anda</label>
+                <textarea id="alamat" rows="2" placeholder="Nama kampung, RT/RW, nama desa di Patokbeusi" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+            </div>
+
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Detail Tugas / Belanjaan</label>
+                <textarea id="detail" rows="3" placeholder="Contoh: Beli ayam potong 1kg di pasar, minta tolong sekalian anter ke rumah." class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+            </div>
+
+            <button onclick="kirimOrderan()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg shadow transition duration-200 flex justify-center items-center gap-2 text-lg">
+                <i class="fa-brands fa-whatsapp"></i> Kirim ke WhatsApp Admin
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Bottom Navigation Mockup -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex justify-around max-w-md mx-auto shadow-lg z-50 rounded-t-xl">
+        <a href="#" class="text-green-600 flex flex-col items-center"><i class="fa-solid fa-house text-lg"></i><span class="text-xs mt-1">Home</span></a>
+        <a href="https://wa.me" target="_blank" class="text-gray-400 hover:text-green-600 flex flex-col items-center"><i class="fa-solid fa-headset text-lg"></i><span class="text-xs mt-1">Bantuan</span></a>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        function kirimOrderan() {
+            // PENTING: Ganti nomor di bawah ini dengan nomor WhatsApp Admin Anda (Gunakan kode negara 62)
+            const nomorWA = "6283841357193"; 
+
+            const nama = document.getElementById('nama').value.trim();
+            const layanan = document.getElementById('layanan').value;
+            const alamat = document.getElementById('alamat').value.trim();
+            const detail = document.getElementById('detail').value.trim();
+
+            if (!nama || !alamat || !detail) {
+                alert('Mohon isi semua formulir terlebih dahulu agar kurir tidak bingung!');
+                return;
+            }
+
+            // Menyusun format text pesan WhatsApp
+            const teksPesan = encodeURIComponent(
+                `*🚨 PESANAN JASUPA 🚨*\n\n` +
+                `👤 *Nama Pelanggan:* ${nama}\n` +
+                `🛠️ *Jenis Layanan:* ${layanan}\n` +
+                `📍 *Alamat Tujuan:* ${alamat}\n\n` +
+                `📝 *Detail Suruhan/Tugas:*\n${detail}\n\n` +
+                `_Mohon segera diproses ya Admin! Terima kasih._`
+            );
+
+            // Mengarahkan ke API WhatsApp otomatis
+            const urlWhatsApp = `https://whatsapp.com{nomorWA}&text=${teksPesan}`;
+            window.open(urlWhatsApp, '_blank');
+        }
+    </script>
+</body>
+</html>
