@@ -3,76 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jasa Suruh Patokbeusi</title>
-    <script src="https://tailwindcss.com"></script>
+    <title>JASUPA</title>
+    <!-- SERVER TERBARU UNTUK DESAIN GRAFIS WARNA -->
+    <script src="https://jsdelivr.net"></script>
     <link rel="stylesheet" href="https://cloudflare.com">
     <style>
-        body { font-family: sans-serif; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen pb-20">
+<body class="bg-slate-900 min-h-screen pb-24 text-slate-100 flex flex-col justify-between">
 
-    <!-- Header -->
-    <header class="bg-green-600 text-white p-4 shadow-md sticky top-0 z-50 text-center">
-        <h1 class="text-xl font-bold">🏃‍♂️ JASUPA </h1>
-        <p class="text-xs opacity-90 text-yellow-200">Solusi Cepat & Amanah Warga Patokbeusi</p>
-    </header>
+    <div>
+        <!-- Header Grafis Modern -->
+        <header class="bg-gradient-to-r from-emerald-600 to-teal-500 text-white p-5 shadow-lg sticky top-0 z-50 text-center rounded-b-2xl border-b border-emerald-400/20">
+            <h1 class="text-2xl font-black tracking-wider flex justify-center items-center gap-2">
+                <i class="fa-solid fa-person-running animate-bounce text-yellow-300"></i> JASUPA
+            </h1>
+            <p class="text-xs opacity-90 text-yellow-100 font-medium tracking-wide mt-1">Solusi Cepat & Amanah Warga Patokbeusi</p>
+        </header>
 
-    <!-- Main Content -->
-    <main class="max-w-md mx-auto p-4 space-y-4">
-        
-        <!-- Banner Informasi -->
-        <div class="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl p-4 text-white shadow-sm">
-            <h2 class="font-bold text-lg">Bantu Teman, Mudahkan Urusan!</h2>
-            <p class="text-sm opacity-90 mt-1">Butuh belanja ke pasar, bayar tagihan, atau antar barang di sekitar Patokbeusi? Tim kami siap meluncur!</p>
-        </div>
-
-        <!-- Form Order -->
-        <div class="bg-white rounded-xl p-5 shadow-sm space-y-4">
-            <h3 class="font-bold text-gray-800 text-lg border-b pb-2"><i class="fa-solid fa-file-invoice text-green-600 mr-2"></i>Formulir Pesanan</h3>
+        <!-- Main Content -->
+        <main class="max-w-md mx-auto p-4 space-y-5">
             
-            <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap</label>
-                <input type="text" id="nama" placeholder="Contoh: Kang Asep" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+            <!-- Banner Informasi Visual Keren -->
+            <div class="bg-gradient-to-br from-amber-500 via-orange-500 to-red-600 rounded-2xl p-5 text-white shadow-xl relative overflow-hidden border border-orange-400/30">
+                <div class="absolute -right-6 -bottom-6 opacity-10 text-9xl">
+                    <i class="fa-solid fa-motorcycle"></i>
+                </div>
+                <h2 class="font-extrabold text-xl flex items-center gap-2">Bantu Teman, Mudahkan Urusan!</h2>
+                <p class="text-sm opacity-95 mt-2 leading-relaxed">Butuh belanja ke pasar, bayar tagihan, atau antar barang di sekitar Patokbeusi? Tim kurir kami siap meluncur ke lokasi Anda!</p>
             </div>
 
-            <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-1">Pilih Jenis Layanan</label>
-                <select id="layanan" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white">
-                    <option value="Belanja ke Pasar/Toko">Belanja ke Pasar / Toko</option>
-                    <option value="Antar / Jemput Barang">Antar / Jemput Barang</option>
-                    <option value="Beli Makanan Makanan Siap Saji">Beli Makanan / Cemilan</option>
-                    <option value="Urusan Lainnya (Tulis di detail)">Urusan Lainnya</option>
-                </select>
+            <!-- Form Order Modern -->
+            <div class="bg-slate-800/90 rounded-2xl p-6 shadow-2xl space-y-4 border border-slate-700/60 backdrop-blur-md">
+                <h3 class="font-extrabold text-teal-400 text-lg border-b border-slate-700 pb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-file-signature text-xl"></i> Formulir Pesanan Jasa
+                </h3>
+                
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="Contoh: Kang Asep" class="w-full p-3.5 bg-slate-900/60 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-white placeholder-slate-500 transition-all">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">Pilih Jenis Layanan</label>
+                    <div class="relative">
+                        <select id="layanan" class="w-full p-3.5 bg-slate-900/60 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-white bg-slate-900 transition-all appearance-none">
+                            <option value="Belanja ke Pasar/Toko">🛒 Belanja ke Pasar / Toko</option>
+                            <option value="Antar / Jemput Barang">📦 Antar / Jemput Barang</option>
+                            <option value="Beli Makanan Makanan Siap Saji">🍗 Beli Makanan / Cemilan</option>
+                            <option value="Urusan Lainnya (Tulis di detail)">🛠️ Urusan Lainnya</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-400">
+                            <i class="fa-solid fa-chevron-down text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">Alamat Lengkap Anda</label>
+                    <textarea id="alamat" rows="2" placeholder="Tulis nama kampung, RT/RW, nama desa di Patokbeusi" class="w-full p-3.5 bg-slate-900/60 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-white placeholder-slate-500 transition-all"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">Detail Tugas / Belanjaan</label>
+                    <textarea id="detail" rows="3" placeholder="Contoh: Beli ayam potong 1kg di pasar, minta tolong sekalian anter ke rumah ya kang." class="w-full p-3.5 bg-slate-900/60 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-white placeholder-slate-500 transition-all"></textarea>
+                </div>
+
+                <!-- DIUBAH MENJADI LINK STRUKTUR MURNI (ANTI-BLOKIR BROWSER) -->
+                <a id="tombolWA" href="#" onclick="prosesOrderan(event)" class="w-full mt-2 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-black py-4 px-4 rounded-xl shadow-xl transition-all duration-300 flex justify-center items-center gap-3 text-base active:scale-95 border-b-4 border-green-700 hover:border-b-2 hover:mt-2.5 text-center">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> KIRIM KE WHATSAPP ADMIN
+                </a>
             </div>
 
-            <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-1">Alamat Lengkap Anda</label>
-                <textarea id="alamat" rows="2" placeholder="Nama kampung, RT/RW, nama desa di Patokbeusi" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
-            </div>
-
-            <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-1">Detail Tugas / Belanjaan</label>
-                <textarea id="detail" rows="3" placeholder="Contoh: Beli ayam potong 1kg di pasar, minta tolong sekalian anter ke rumah." class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
-            </div>
-
-            <button onclick="kirimOrderan()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg shadow transition duration-200 flex justify-center items-center gap-2 text-lg">
-                <i class="fa-brands fa-whatsapp"></i> Kirim ke WhatsApp Admin
-            </button>
-        </div>
-
-    </main>
-
-    <!-- Bottom Navigation Mockup -->
-    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex justify-around max-w-md mx-auto shadow-lg z-50 rounded-t-xl">
-        <a href="#" class="text-green-600 flex flex-col items-center"><i class="fa-solid fa-house text-lg"></i><span class="text-xs mt-1">Home</span></a>
-        <a href="https://wa.me" target="_blank" class="text-gray-400 hover:text-green-600 flex flex-col items-center"><i class="fa-solid fa-headset text-lg"></i><span class="text-xs mt-1">Bantuan</span></a>
+        </main>
     </div>
 
-    <!-- JavaScript Logic -->
+    <!-- Bottom Navigation Bar -->
+    <div class="fixed bottom-4 left-4 right-4 bg-slate-800/95 border border-slate-700/50 p-3 flex justify-around max-w-md mx-auto shadow-2xl z-50 rounded-2xl backdrop-blur-md">
+        <a href="#" class="text-emerald-400 flex flex-col items-center font-bold text-xs"><i class="fa-solid fa-house text-lg mb-1"></i>Home</a>
+        <a href="https://wa.me" target="_blank" class="text-slate-400 hover:text-emerald-400 flex flex-col items-center font-medium text-xs transition-colors"><i class="fa-solid fa-circle-question text-lg mb-1"></i>Bantuan</a>
+    </div>
+
+    <!-- JavaScript Logic Terbaru -->
     <script>
-        function kirimOrderan() {
-            // PENTING: Ganti nomor di bawah ini dengan nomor WhatsApp Admin Anda (Gunakan kode negara 62)
+        function prosesOrderan(event) {
+            // PENTING: Ganti nomor di bawah ini dengan nomor WhatsApp HP Anda (Wajib diawali 62)
             const nomorWA = "6283841357193"; 
 
             const nama = document.getElementById('nama').value.trim();
@@ -81,7 +97,8 @@
             const detail = document.getElementById('detail').value.trim();
 
             if (!nama || !alamat || !detail) {
-                alert('Mohon isi semua formulir terlebih dahulu agar kurir tidak bingung!');
+                event.preventDefault(); // Batalkan pengalihan ke WA jika form kosong
+                alert('Waduh! Mohon isi semua formulir dulu ya, biar kurir kita ga kebingungan!');
                 return;
             }
 
@@ -95,9 +112,9 @@
                 `_Mohon segera diproses ya Admin! Terima kasih._`
             );
 
-            // Mengarahkan ke API WhatsApp otomatis
-            const urlWhatsApp = `https://whatsapp.com{nomorWA}&text=${teksPesan}`;
-            window.open(urlWhatsApp, '_blank');
+            // Mengubah link tujuan tombol secara langsung menggunakan format wa.me resmi
+            const tautanBaru = `https://wa.me{nomorWA}?text=${teksPesan}`;
+            document.getElementById('tombolWA').setAttribute('href', tautanBaru);
         }
     </script>
 </body>
